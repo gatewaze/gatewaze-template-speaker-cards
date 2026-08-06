@@ -1,0 +1,8 @@
+{
+  "$comment": "Event → brand resolution for speaker promo cards. Rules are evaluated top to bottom; the first match wins. Matching fields (all optional, ALL present fields must match): event_id (exact), event_slug_contains, title_contains, event_type (exact). Substring matches are case-insensitive. No regex on purpose.",
+  "default_brand": "voice",
+  "rules": [
+    { "brand": "voice", "title_contains": "voice" },
+    { "brand": "finance", "title_contains": "finance" }
+  ]
+}
