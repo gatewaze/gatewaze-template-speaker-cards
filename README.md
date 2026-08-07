@@ -49,3 +49,14 @@ mapping.json                    # event → brand rules (first match wins) + def
    `brands/lockup-<key>.svg`.
 2. Add a rule to `mapping.json`.
 3. Push — the worker picks it up on the next kit generation (cache ≤10 min).
+
+## Slide deck template
+
+`templates/speaker-deck-template.pptx` is the base for each speaker's
+personalized talk deck (PPTX / Google Slides-compatible). The worker only
+uses its package skeleton (theme, layouts, slide count) — every slide's
+content is rebuilt at generation time: slide 1 becomes the branded title
+slide (card art + editable name/role/company/talk + social-handle line),
+and later slides get the white-with-accent-border + masthead treatment.
+Add or reorder slides here to change how many content pages speakers start
+with.
